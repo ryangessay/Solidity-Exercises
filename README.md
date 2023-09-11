@@ -1,1 +1,1 @@
-# Solidity-Exercises
+Showcasing coding exercises I have completed!
