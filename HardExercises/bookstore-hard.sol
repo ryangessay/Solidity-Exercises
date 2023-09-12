@@ -182,10 +182,10 @@ contract Bookstore {
 
         Book memory selectedBook = books[_tempId];
         
-        if (msg.sender == owner || selectedBook.available) {
+        if (msg.sender == owner || selectedBook.available == true) {
             return (selectedBook.title, selectedBook.author, selectedBook.publication, selectedBook.available);
         } else {
-            return ("", "", "", false);
+            revert("Book is not available");
         }
     }
 }
