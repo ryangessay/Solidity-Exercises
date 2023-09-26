@@ -110,21 +110,21 @@ contract DWGotTalent {
             if (isJudge[msg.sender]) {
                 judgeVote[lastVote]--;
                 judgeVote[_finalistAddress]++; 
-                votedFor[msg.sender] ==_finalistAddress;
+                votedFor[msg.sender] =_finalistAddress;
             } else {
                 audienceVote[lastVote]--;
                 audienceVote[_finalistAddress]++;
-                votedFor[msg.sender] ==_finalistAddress;
+                votedFor[msg.sender] =_finalistAddress;
             }    
         }   
 
         if (isJudge[msg.sender]) {
             judgeVote[_finalistAddress]++; 
-            votedFor[msg.sender] ==_finalistAddress;
+            votedFor[msg.sender] =_finalistAddress;
             hasVoted[msg.sender] = true;
         } else {
             audienceVote[_finalistAddress]++;
-            votedFor[msg.sender] ==_finalistAddress;
+            votedFor[msg.sender] =_finalistAddress;
             hasVoted[msg.sender] = true;
         }            
     }
